@@ -36,7 +36,7 @@ turns on the packs that project actually needs.
 | `crm` | 5 | — |
 | `hs-sales` | 9 | — |
 | `hs-operations` | 5 | — |
-| `hs-marketing` | 0 | — |
+| `hs-marketing` | 6 | — |
 | `media` | 44 | — |
 | `design-review` | 15 | — |
 | `integrations` | 7 | — |
@@ -50,8 +50,8 @@ legacy skills; each carries a `Merged from:` line naming its sources. The canoni
 lives in the Notion **Agents Dev Hub → Agent Skills** database — disk is authoritative for
 content, Notion for curation.
 
-`hs-marketing` is intentionally empty: its 6 skills are still `Draft` in Notion and have not
-passed review.
+`hs-marketing`'s 6 skills were approved and pulled from Notion on 2026-08-10. They remain
+`Draft` status in the Notion database until flipped to `Active`.
 
 ## Conventions
 
