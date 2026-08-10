@@ -38,7 +38,7 @@ turns on the packs that project actually needs.
 | `hs-operations` | 5 | — |
 | `hs-marketing` | 6 | — |
 | `media` | 44 | — |
-| `design-review` | 15 | — |
+| `design-review` | 8 | — |
 | `integrations` | 7 | — |
 | `figma` | 5 | — |
 | `agent-ops` | 11 | — |
@@ -60,5 +60,6 @@ content, Notion for curation.
 - Three marketplace manifests are kept byte-identical: `.claude-plugin/`,
   `.agents/plugins/`, `.cursor-plugin/`. A plugin registered in only one of them will not
   resolve for the other runtimes.
-- `design-review` consolidates four former stacks. Skill-level overlap is documented in
-  `plugins/design-review/OVERLAP.md` and has **not** been cut.
+- `design-review` consolidates four former stacks. The skill-level overlap cut was executed
+  on 2026-08-10 (15 skills → 8); what was removed and why is in
+  `plugins/design-review/OVERLAP.md`, and every removed skill is recoverable from git history.

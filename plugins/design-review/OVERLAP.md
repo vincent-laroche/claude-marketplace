@@ -9,25 +9,29 @@ This plugin consolidates **four previously separate stacks** that all did some f
 | `open-design-plugin` | build-test, clone-audit, critique-theater, design-extract, design-system-package, diff-review, figma-extract, token-map |
 | `~/.claude/skills` (standalone) | website-ux-science-audit, brand-identity |
 
-Collapsing four plugins into one removes the plugin-level duplication. **The skill-level
-overlap has deliberately not been cut** — that judgement is yours, and deleting is harder
-to undo than keeping.
+Collapsing four plugins into one removed the plugin-level duplication. The skill-level
+overlap cut was **executed on 2026-08-10**, taking the plugin from 15 skills to 8.
 
-## Where the real redundancy is
+## What was cut
 
-### Cluster 1 — "judge a live interface for quality" (4 skills, heavy overlap)
+### Cluster 1 — "judge a live interface for quality" (4 removed, 1 kept)
 
-- `designer-eye-review` — designer-eye audit of a live interface; visual QA, spacing, hierarchy
-- `visual-polish-review` — whether a page/screen/Figma frame/email looks polished
-- `frontend-craft-review` — frontend interfaces for distinctive craft and design-system quality
-- `critique-theater` — critique workflow from open-design
+Removed: `designer-eye-review`, `visual-polish-review`, `frontend-craft-review`,
+`critique-theater`.
 
-These answer nearly the same question. **Recommend: keep one.** `website-ux-science-audit`
-is arguably stronger than all four — it has a P0–P3 severity ladder, a measured-vs-heuristic
-evidence rule, and real tooling (`scripts/audit_page.py` running Lighthouse, axe, Pa11y,
-Wallace). The other four are prose-only.
+All four answered nearly the same question in prose only. `website-ux-science-audit` was
+kept in their place — it has a P0–P3 severity ladder, a measured-vs-heuristic evidence
+rule, and real tooling (`scripts/audit_page.py` running Lighthouse, axe, Pa11y, Wallace).
 
-### Cluster 2 — genuinely distinct jobs (keep all)
+### Cluster 4 — not really design review (3 removed)
+
+Removed: `build-test`, `clone-audit`, `diff-review`. Engineering-flavoured, not design
+review. These were dropped rather than moved to `storefront`; if any of them turns out to
+be wanted, recover it from git history rather than rewriting.
+
+## What was kept (8)
+
+### Genuinely distinct jobs
 
 - `design-fidelity-qa` — compares a **rendered implementation against a source** (Figma frame,
   mockup). No other skill does this.
@@ -36,21 +40,16 @@ Wallace). The other four are prose-only.
 - `brand-identity` — **designs** an identity system rather than critiquing one. Different verb.
   Note: generic, no Hair Solutions specifics — tagged `Needs Adaptation` in Notion.
 
-### Cluster 3 — design-system extraction (4 skills, possible overlap)
+### Design-system extraction pipeline
 
 - `design-extract`, `design-system-package`, `token-map`, `figma-extract`
 
-These form a pipeline (extract → map tokens → package) rather than four competing takes,
-so they may all earn their place. But `figma-extract` overlaps the separate `figma` plugin,
-and `token-map` overlaps `brand`'s Atelier Zero token authority — which is the **canonical**
-source. Any token extraction must defer to `brand`, never override it.
+These form a pipeline (extract → map tokens → package) rather than four competing takes.
+Two caveats stand: `figma-extract` overlaps the separate `figma` plugin, and `token-map`
+overlaps `brand`'s Atelier Zero token authority — which is the **canonical** source. Any
+token extraction must defer to `brand`, never override it.
 
-### Cluster 4 — not really design review
-
-- `build-test`, `clone-audit`, `diff-review` — engineering-flavoured. Consider moving to
-  `storefront` or dropping.
-
-## Also overlapping, outside this plugin
+## Still overlapping, outside this plugin
 
 - `storefront/storefront-abnormality-audit` — page-level QA for Shopify specifically. Distinct
   enough to keep separate, but it and `website-ux-science-audit` will both fire on
@@ -59,8 +58,10 @@ source. Any token extraction must defer to `brand`, never override it.
 - `brand/atelier-zero-brand-compliance` — brand-specific audit; the canonical one for anything
   customer-facing.
 
-## Suggested end state
+## Recovery
 
-Roughly **6–8 skills**: one live-interface reviewer, `design-fidelity-qa`,
-`product-design-audit`, `brand-identity`, and the extraction pipeline — with the redundant
-critique skills retired once you've confirmed which voice you prefer.
+Every removed skill is in git history. To restore one:
+
+```bash
+git checkout 200dd9a -- plugins/design-review/skills/<name>
+```
