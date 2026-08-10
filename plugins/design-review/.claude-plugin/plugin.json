@@ -1,0 +1,9 @@
+{
+  "name": "design-review",
+  "version": "1.0.0",
+  "description": "Design critique and design-system extraction \u2014 visual polish, designer-eye and frontend-craft review, product-flow audit, fidelity QA against a source, evidence-backed UX science auditing, brand identity systems, and token/design extraction. Consolidates four previously separate stacks; see OVERLAP.md.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Style CSS to Shopify"
+  short_description: "Map design CSS to native Horizon safely"
+  default_prompt: "Use $style-css-to-shopify to map this design CSS into native Horizon sections, settings, and only justified custom Liquid."

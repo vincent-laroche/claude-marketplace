@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website UX Science Audit"
+  short_description: "Science-backed website UX audit"
+  default_prompt: "Use $website-ux-science-audit to audit this website for UX, structure, accessibility, performance, and brand discipline."

@@ -1,0 +1,9 @@
+{
+  "name": "integrations",
+  "version": "1.0.0",
+  "description": "Connective tissue \u2014 Notion, n8n, Composio app connections, Instagram, HubSpot integration, Cloudflare operations for hairsolutions.co, and Figma REST automation.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED"
+}

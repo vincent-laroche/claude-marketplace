@@ -1,0 +1,7 @@
+{
+  "name": "hs-sales",
+  "version": "0.1.0",
+  "description": "Hair Solutions Co. sales suite: client research, consultation prep, call summaries, competitive intel, outreach, deal assets, daily briefing, pipeline review, and revenue forecasting — adapted to the HS HubSpot CRM, Shopify storefront, and appointment-driven business model.",
+  "author": { "name": "Hair Solutions Co." },
+  "license": "UNLICENSED"
+}

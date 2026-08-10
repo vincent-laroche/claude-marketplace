@@ -1,0 +1,9 @@
+{
+  "name": "storefront",
+  "version": "2.0.0",
+  "description": "Hair Solutions Co. Shopify storefront engineering \u2014 Horizon theme sections and blocks, metaobjects and metafields, custom product and order options, Cloudinary media, Help Center, CSS-to-Liquid translation, abnormality auditing, and the GitHub-synced release workflow. Ships 3 subagents and a write-boundary hook.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED"
+}

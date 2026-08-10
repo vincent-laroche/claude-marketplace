@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Media Design Science Audit"
+  short_description: "Science-backed social design audits"
+  default_prompt: "Use $social-media-design-science-audit to audit this Instagram, TikTok, or Facebook creative for design, accessibility, color, platform fit, and brand risk."

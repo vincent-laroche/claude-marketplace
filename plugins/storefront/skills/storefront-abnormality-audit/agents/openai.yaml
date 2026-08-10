@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storefront Abnormality Audit"
+  short_description: "Detects hidden storefront UX flaws."
+  default_prompt: "Audit this storefront page for abnormalities. Infer the page type, inspect rendered behavior and source, then return severity-ranked findings with evidence and fixes."

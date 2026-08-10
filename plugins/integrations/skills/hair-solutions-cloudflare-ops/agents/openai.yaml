@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hair Solutions Cloudflare Ops"
+  short_description: "Use the correct Hair Solutions Cloudflare tokens safely."
+  default_prompt: "Use $hair-solutions-cloudflare-ops to manage a private Hair Solutions Cloudflare subdomain or Worker deployment without exposing secrets."

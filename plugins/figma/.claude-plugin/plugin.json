@@ -1,0 +1,9 @@
+{
+  "name": "figma",
+  "version": "1.0.0",
+  "description": "Figma developer tooling \u2014 API selection, Plugin API, plugin development, REST integration, and bounded web-capture import.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED"
+}
