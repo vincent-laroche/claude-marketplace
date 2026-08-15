@@ -10,14 +10,14 @@ description: Commit and push completed hairsolutions.co theme changes. main = li
 ## Preconditions
 - `storefront-preflight` passed: on `main`, clean intent, no active rebase.
 - Definition of Done checklist from `storefront-build` passed for every changed section/block.
-- Changes are inside `/Users/vMac/06_storefront/shopify_github_synched_theme_files`.
+- Changes are inside `/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files`.
 
 ## Validate before commit
 From the repo: `npm run validate` and `npm run validate:full` (full Theme Check). Fix all errors. Do relevant visual/critical-flow QA (use chrome-devtools at 320–1440px for customer-facing changes).
 
 ## Commit & push (Desktop Commander only)
 ```
-cd /Users/vMac/06_storefront/shopify_github_synched_theme_files
+cd /Users/vMac/06_storefront/shopify_github_repo_synched_theme_files
 git add -A && git commit -m "<type(scope): summary>" && git push origin main
 ```
 If push is rejected (Shopify reverse-sync added a commit):

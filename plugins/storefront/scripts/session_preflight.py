@@ -7,7 +7,7 @@ Never blocks (always exits 0).
 """
 import os, subprocess, sys
 
-REPO = "/Users/vMac/06_storefront/shopify_github_synched_theme_files"
+REPO = "/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files"
 
 def git(*args):
     return subprocess.run(["git", "-C", REPO, *args],

@@ -9,7 +9,7 @@ The bash sandbox runs over a FUSE mount that cannot `unlink()`, so git lock file
 
 ## Fix (Desktop Commander only)
 1. Confirm no real git process is running: `mcp__Desktop_Commander__list_processes` → look for `git`.
-2. In `/Users/vMac/06_storefront/shopify_github_synched_theme_files`, remove stale locks:
+2. In `/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files`, remove stale locks:
    ```
    find .git -name '*.lock' -print
    find .git -name '*.lock' -delete

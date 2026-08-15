@@ -8,11 +8,11 @@ description: Read-only session boot check for hairsolutions.co storefront work �
 Run this first on any storefront task. Read-only — it never edits, commits, or deploys.
 
 ## Checks (via Desktop Commander, never bash sandbox for git)
-1. Confirm working dir is the deploy repo: `/Users/vMac/06_storefront/shopify_github_synched_theme_files`. Edits anywhere else do NOT deploy.
+1. Confirm working dir is the deploy repo: `/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files`. NOTE: the parent `/Users/vMac/06_storefront` is ALSO a Shopify-synced repo (vincent-laroche/atelier-zero-storefront). Both trees deploy; confirm which theme is published before assuming this one is live.
 2. `git status` — branch is `main`, working tree clean (or summarize uncommitted changes).
 3. `git fetch origin` then compare: is local `main` == `origin/main`? Is `dev` behind `main`? (`dev` should be kept fast-forwarded by the `sync-dev.yml` Action — flag if it has drifted.)
 4. Confirm no active rebase/merge (`.git/rebase-*`, `MERGE_HEAD`). If stale `.git/*.lock` exists, use the `fix-git-locks` skill.
-5. Read `/Users/vMac/06_storefront/shopify_github_synched_theme_files/AGENTS.md`.
+5. Read `/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files/AGENTS.md`.
 
 ## Hard rules
 - All git ops go through `mcp__Desktop_Commander__start_process` (FUSE sandbox breaks git locks).

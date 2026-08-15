@@ -1,10 +1,24 @@
 # Theme map — Hair Solutions Co. storefront
 
-- Store: `one-head-hair.myshopify.com` → `hairsolutions.co`. Theme: Horizon **4.1.1** (GitHub sync).
-- **Git repo (the only thing that deploys):** `/Users/vMac/06_storefront/shopify_github_synched_theme_files` → `github.com/vincent-laroche/storefront`.
-  - `main` = live. `dev` = experimental (kept fast-forwarded to main by `sync-dev.yml`).
-  - Parent `/Users/vMac/06_storefront` is the project root (design system, brand, tooling) — NOT the deploy repo. Edits there do not deploy.
-- **No Shopify CLI. No theme dev server.** Ever. Only local repo ↔ GitHub.
+- Store: `one-head-hair.myshopify.com` → `hairsolutions.co`.
+
+> **This document maps the Horizon 4.1.1 theme only.** Two GitHub-synced theme
+> repositories now exist, and **both** sync to the store. Confirm which theme is
+> *published* before treating anything here as live — this file cannot tell you.
+>
+> | Repo | Path | Theme |
+> |---|---|---|
+> | `vincent-laroche/storefront` | `/Users/vMac/06_storefront/shopify_github_repo_synched_theme_files` | Horizon **4.1.1**, `hs-*` sections — what this document maps |
+> | `vincent-laroche/atelier-zero-storefront` | `/Users/vMac/06_storefront` (the parent itself) | Horizon **4.1.3**, Atelier Zero — mapped by its own `AGENTS.md` |
+>
+> Two earlier claims in this file were wrong and have been corrected: the path was
+> written `shopify_github_synched_theme_files` (missing `repo_`), and the parent
+> directory was described as tooling-only that "does not deploy". The parent **is**
+> a Shopify-synced repository — its history carries `Update from Shopify for theme
+> atelier-zero-storefront/main` commits. Treat edits in either tree as deployable.
+
+- Horizon 4.1.1 repo: `main` = live for that theme. `dev` = experimental (kept fast-forwarded to main by `sync-dev.yml`).
+- **No Shopify CLI. No theme dev server.** Ever. Only local repo ↔ GitHub. `theme check` is permitted — it is local static analysis.
 
 ## Horizon 4.1.1 — what changed
 - Color schemes are gone. There is ONE **Color Palette**: reference `settings.color_palette.background` and `settings.color_palette.foreground` (seen throughout `product.hair-systems.json`). Do not reintroduce scheme settings.
@@ -21,7 +35,7 @@
 
 ## Custom product options (on PDPs)
 Blocks: `hs-custom-product-options-module.liquid`, `hs-custom-product-options-modal.liquid`, `hs-custom-property-radio/checkbox/swatch.liquid`, `hs-custom-system-configurator.liquid`, `option_group.liquid`, `product-custom-property.liquid`, `question.liquid`.
-Engine: `assets/hs-customization-engine.js`. Spec: `/Users/vMac/03_agents/Claude/Projects/Shopify Theme Dev/HSC-Product-Options-Data-and-JS-Spec.md`.
+Engine: `assets/hs-customization-engine.js`. Spec: `/Users/vMac/03_agents/Claude/Projects/Shopify Theme Dev/HSC-Product-Options-Data-and-JS-Spec.md` **(verified missing 2026-08-15 — do not chase this path; derive the contract from `assets/hs-customization-engine.js` and the live metaobject definitions instead)**.
 
 ## Key custom sections (sections/, prefix hs-custom-* / hs-*)
 Home: `hs-custom-hero`, `hs-custom-hero-floating`, `hs-home-*`, `hs-custom-collections-bento`, `hs-custom-process-steps`, `hs-custom-feature-grid`, `hs-custom-big-statement`, `hs-custom-cta`, `hs-custom-testimonials`, `hs-custom-stats-band`, `hs-custom-press-logos`, `hs-custom-editorial-fullbleed`.
@@ -35,4 +49,6 @@ Tag taxonomy: `type:hair-system`, `custom`, `base:{lace,skin,mono}`, `material:{
 Accessory collections (tapes, liquid-adhesives, removers-and-solvents, hair-care, scalp-prep, maintenance) exist but are currently empty.
 
 ## Theme rules (enforced)
-Preserve `block.shopify_attributes`, schema/setting IDs, dynamic sources, metafields, app blocks. Don't touch app-managed `ecom-*`, `ss-*`, `foxify-*`. New components use `hs-custom-*`. Mobile QA at 320/375/390/430. OKLCH tokens only; design system `styles.css` is the only CSS to link.
+Preserve `block.shopify_attributes`, schema/setting IDs, dynamic sources, metafields, app blocks. Don't touch app-managed `ecom-*`, `ss-*`, `foxify-*`. New components in THIS theme use `hs-custom-*`; the Atelier Zero theme uses its own prefix — read that repo's `AGENTS.md`. Mobile QA at 320/375/390/430.
+
+Token authority is `/Users/vMac/08_brand/brand-design-system` (`tokens/`, `specs/`). Use custom properties, never hardcoded hex. The former `Hair Solutions Co. Design System/` directory and its `styles.css` no longer exist — resolve the actual stylesheet from the target repository's `assets/` rather than assuming a path.

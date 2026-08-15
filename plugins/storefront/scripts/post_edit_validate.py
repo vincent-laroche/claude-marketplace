@@ -8,7 +8,7 @@ the OKLCH-tokens / corner rules stay top of mind. It never edits or blocks.
 """
 import json, re, sys
 
-THEME_DIR = "shopify_github_synched_theme_files"
+THEME_DIR = "shopify_github_repo_synched_theme_files"
 
 def main():
     try:

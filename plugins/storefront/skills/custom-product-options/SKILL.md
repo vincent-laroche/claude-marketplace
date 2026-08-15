@@ -15,7 +15,7 @@ Custom, non-variant product options on hair-system PDPs. Choices render as radio
 
 ## Engine & spec (read before editing)
 - JS: `assets/hs-customization-engine.js` — state, price recompute, line-item property assembly, validation.
-- Spec: `/Users/vMac/03_agents/Claude/Projects/Shopify Theme Dev/HSC-Product-Options-Data-and-JS-Spec.md` — the data + JS contract. Read it before changing behavior.
+- Spec: `/Users/vMac/03_agents/Claude/Projects/Shopify Theme Dev/HSC-Product-Options-Data-and-JS-Spec.md` **(verified missing 2026-08-15 — do not chase this path; derive the contract from `assets/hs-customization-engine.js` and the live metaobject definitions instead)** — the data + JS contract. Read it before changing behavior.
 
 ## Conventions
 - Options source from metaobjects (see `metaobjects-metafields`) — `label/value/image/addon_product/price/sort_order`. Don't hardcode option lists.
