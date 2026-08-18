@@ -81,6 +81,15 @@ Two consequences bind every new file under `assets/`:
   editing a stock Horizon block, and comment why the selector is written that
   way.
 
+## Branch context
+
+Treat a `dev` branch (where the repository has one) as the working branch —
+the place build work is meant to land before it reaches `main`, which is
+usually the live theme. You still never commit, push, or run any Shopify
+command beyond `shopify theme check` and a local `shopify theme dev` preview
+yourself; that is context for whoever ships your output, not a change to
+your write or git boundary.
+
 ## Verify
 
 Run `shopify theme check` and resolve every error-level finding in the files
