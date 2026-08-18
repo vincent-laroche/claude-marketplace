@@ -1,4 +1,0 @@
-interface:
-  display_name: "Atelier Zero Converter"
-  short_description: "Convert any design to viewable Atelier Zero HTML"
-  default_prompt: "Use $atelier-zero-converter to create a standalone HTML-only Atelier Zero conversion of this source and give me the viewable file."

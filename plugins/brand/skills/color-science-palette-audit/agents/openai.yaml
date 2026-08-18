@@ -1,4 +1,0 @@
-interface:
-  display_name: "Color Science Palette Audit"
-  short_description: "Audit palettes with modern color science"
-  default_prompt: "Use $color-science-palette-audit to evaluate these hex colors for brand palette compatibility."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Extract"
-  short_description: "Extract traceable design tokens"
-  default_prompt: "Use $design-extract to inventory tokens from this source."

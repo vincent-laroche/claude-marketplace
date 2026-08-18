@@ -37,17 +37,21 @@ be wanted, recover it from git history rather than rewriting.
   mockup). No other skill does this.
 - `product-design-audit` — audits a **flow** (onboarding, checkout, multi-step), not a screen.
 - `website-ux-science-audit` — evidence-backed audit with live tooling and severity ranking.
-- `brand-identity` — **designs** an identity system rather than critiquing one. Different verb.
-  Note: generic, no Hair Solutions specifics — tagged `Needs Adaptation` in Notion.
+- `brand-identity` — removed 2026-08-18, see below.
 
-### Design-system extraction pipeline
+### Design-system extraction pipeline — removed 2026-08-18
 
-- `design-extract`, `design-system-package`, `token-map`, `figma-extract`
+`design-extract`, `design-system-package`, `token-map` and `brand-identity` were
+removed from this plugin. A design system does not live in the marketplace: the
+authority is `vincent-laroche/brand-design-system`, and carrying extraction and
+identity tooling here invited a second copy that would drift from it. The caveat
+this file already recorded — that `token-map` overlapped the canonical Atelier
+Zero token authority and had to defer to it — was the warning sign.
 
-These form a pipeline (extract → map tokens → package) rather than four competing takes.
-Two caveats stand: `figma-extract` overlaps the separate `figma` plugin, and `token-map`
-overlaps `brand`'s Atelier Zero token authority — which is the **canonical** source. Any
-token extraction must defer to `brand`, never override it.
+`figma-extract` stays; it reads a Figma file and overlaps the separate `figma`
+plugin, not the brand authority.
+
+All four are recoverable from git history (`git log --diff-filter=D --  'plugins/design-review/skills/*'`).
 
 ## Still overlapping, outside this plugin
 

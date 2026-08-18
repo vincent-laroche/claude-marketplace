@@ -2,11 +2,20 @@
 
 Vincent Laroche's working toolkit — a Claude Code / Codex / Cursor plugin marketplace.
 
-Repo: `vincent-laroche/claude-marketplace`. Marketplace name: `claude-marketplace` (the name used in
-`plugin@name`; it deliberately differs from the repo name, same as `hairsolutionsco` lives in
-`hairsolutionsco-ai-toolkit`).
+Repo: `vincent-laroche/claude-marketplace`. Marketplace name: `claude-marketplace` — the name
+used in `plugin@name`, the install directory, and the cache path. Repo and marketplace name
+are deliberately kept identical; they were `marketplace` and `atelier` until 2026-08-18.
 
-Replaces `hairsolutionsco-ai-toolkit`. That repo stays in place until this one is proven.
+Replaces `hairsolutionsco-ai-toolkit`, which is now `vincent-laroche/agents-marketplace`.
+
+## Scope — what does not live here
+
+**The design system is not in this marketplace.** `vincent-laroche/brand-design-system` is the
+sole authority for Atelier Zero tokens, foundations and specs. The `brand` plugin and
+`design-review`'s extraction pipeline (`design-extract`, `design-system-package`, `token-map`,
+`brand-identity`) were removed on 2026-08-18 for exactly this reason — they carried a second
+copy of token values that would drift from the brand repo. Skills that need brand values read
+them from that repo at runtime; they never restate them.
 
 ## Install
 
@@ -31,7 +40,6 @@ turns on the packs that project actually needs.
 | Plugin | Skills | Also ships |
 | --- | ---: | --- |
 | `storefront` | 13 | 3 agents, hook |
-| `brand` | 4 | 1 agents |
 | `marketing` | 11 | — |
 | `email-marketing` | 13 | 8 paired agents, MailerLite MCP, hooks |
 | `crm` | 5 | — |
@@ -39,7 +47,7 @@ turns on the packs that project actually needs.
 | `hs-operations` | 5 | — |
 | `hs-marketing` | 6 | — |
 | `media` | 44 | — |
-| `design-review` | 8 | — |
+| `design-review` | 4 | — |
 | `integrations` | 7 | — |
 | `figma` | 11 | 1 agent, command, hooks |
 | `agent-ops` | 11 | — |
