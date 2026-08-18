@@ -1,0 +1,37 @@
+{
+  "name": "email-marketing",
+  "version": "1.0.0",
+  "description": "Hair Solutions Co. MailerLite email operations: account preflight, copy briefs, production HTML, native drag-and-drop modules, campaign drafts, audiences and consent, lifecycle automation architecture and assembly, Shopify ecommerce data, forms, deliverability, analytics, and controlled release. Ships 13 skills, 8 specialized agents, the official OAuth MCP, deterministic validators, and safety hooks.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/marketplace/tree/main/plugins/email-marketing",
+  "license": "UNLICENSED",
+  "keywords": [
+    "mailerlite",
+    "email-marketing",
+    "campaigns",
+    "automations",
+    "audiences",
+    "deliverability",
+    "shopify",
+    "hairsolutions"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Email Marketing",
+    "shortDescription": "Hair Solutions Co. MailerLite email operations: account preflight, copy briefs, production HTML, native drag-and-drop...",
+    "longDescription": "Hair Solutions Co. MailerLite email operations: account preflight, copy briefs, production HTML, native drag-and-drop modules, campaign drafts, audiences and consent, lifecycle automation architecture and assembly, Shopify ecommerce data, forms, deliverability, analytics, and controlled release. Ships 13 skills, 8 specialized agents, the official OAuth MCP, deterministic validators, and safety hooks.",
+    "developerName": "Hair Solutions Co.",
+    "category": "Marketing",
+    "capabilities": [
+      "Skills",
+      "MCP"
+    ],
+    "defaultPrompt": [
+      "Use email-marketing for this task."
+    ]
+  }
+}

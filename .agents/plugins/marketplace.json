@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Vincent Laroche's working toolkit \u2014 Hair Solutions Co. business skills, storefront and brand systems, agent operations, and media production.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
@@ -30,6 +30,15 @@
       "name": "marketing",
       "source": "./plugins/marketing",
       "description": "Hair Solutions Co. marketing execution \u2014 copywriting, content research, social content, email sequences, paid ads, SEO auditing, GA4/GTM/Google Ads instrumentation, Search Console, and science-backed social design auditing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Hair Solutions Co."
+      }
+    },
+    {
+      "name": "email-marketing",
+      "source": "./plugins/email-marketing",
+      "description": "Hair Solutions Co. MailerLite email operations \u2014 account preflight, copy briefs, production HTML, native drag-and-drop modules, campaign drafts, audiences and consent, lifecycle automations, Shopify ecommerce data, forms, deliverability, analytics, and controlled release. Ships 13 skills, 8 paired Claude and Codex agents, the official OAuth MCP, validators, and safety hooks.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
