@@ -2,6 +2,8 @@
 name: lifecycle-architect
 description: Read-only architect for MailerLite lifecycle journeys, triggers, timing, branching, exits, suppression, and measurement. Use before building or materially changing an automation.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Lifecycle Architect

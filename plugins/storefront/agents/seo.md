@@ -2,6 +2,8 @@
 name: seo
 description: Audits on-page SEO and structured data for an Atelier Zero template — heading hierarchy, metadata, canonicals, JSON-LD, internal links, crawlability, and Core Web Vitals signals in markup. Returns a prioritized punch list. Use for SEO audits, schema markup, or a pre-ship SEO check.
 tools: ["Read", "Glob", "Grep", "Bash"]
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # On-page SEO and structured data

@@ -1,9 +1,19 @@
 {
   "name": "integrations",
   "version": "1.0.0",
-  "description": "Connective tissue \u2014 Notion, n8n, Composio app connections, Instagram, HubSpot integration, Cloudflare operations for hairsolutions.co, and Figma REST automation.",
+  "description": "Connective tissue — Notion, n8n, Composio app connections, Instagram, HubSpot integration, Cloudflare operations for hairsolutions.co, and Figma REST automation.",
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Integrations",
+  "keywords": [
+    "notion",
+    "n8n",
+    "cloudflare",
+    "instagram"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/integrations",
+  "defaultEnabled": false
 }

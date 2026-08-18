@@ -56,22 +56,33 @@ turns on the packs that project actually needs.
 ## Plugins
 
 Counted from disk 2026-08-18. Agent counts are Claude `.md` agents; each currently has a
-Codex `.toml` sibling.
+Codex `.toml` sibling. **~tok** is the skill frontmatter that loads into *every* context while
+the plugin is enabled — the standing cost of having it on. **On** marks the three plugins that
+install enabled; the rest ship `defaultEnabled: false` and are opt-in per project.
 
-| Plugin | Skills | Also ships |
-| --- | ---: | --- |
-| `media` | 44 | — |
-| `email-marketing` | 13 | 8 agents, hooks, MailerLite MCP |
-| `storefront` | 13 | 9 agents, hooks, browser-QA + Desktop Commander MCP |
-| `figma` | 12 | 1 agent, 1 command, hooks, Figma MCP |
-| `agent-ops` | 12 | — |
-| `marketing` | 11 | — |
-| `hs-sales` | 9 | — |
-| `integrations` | 7 | — |
-| `hs-marketing` | 6 | — |
-| `crm` | 5 | — |
-| `hs-operations` | 5 | — |
-| `design-review` | 4 | — |
+| Plugin | Skills | ~tok | On | Also ships |
+| --- | ---: | ---: | :-: | --- |
+| `media` | 44 | 3,747 | | — |
+| `email-marketing` | 13 | 1,573 | | 8 agents, hooks, MailerLite MCP |
+| `storefront` | 13 | 1,124 | ● | 9 agents, hooks, browser-QA + Desktop Commander MCP |
+| `figma` | 12 | 1,228 | | 1 agent, 1 command, hooks, Figma MCP |
+| `agent-ops` | 12 | 596 | ● | — |
+| `marketing` | 11 | 1,313 | | — |
+| `hs-sales` | 9 | 767 | | — |
+| `integrations` | 7 | 795 | | — |
+| `hs-marketing` | 6 | 826 | | — |
+| `crm` | 5 | 550 | | — |
+| `hs-operations` | 5 | 481 | | — |
+| `design-review` | 4 | 448 | ● | — |
+| **total** | **140** | **13,454** | | |
+
+Enabling everything costs ~13.5k tokens of context before a single skill is used. The measured
+justification for making most of it opt-in: across ~120 Claude Code startups, `pluginUsage` in
+`~/.claude.json` recorded `storefront` invoked **64 times and every other plugin 0**. Carrying
+12k tokens for capability that never fires is the wrong default.
+
+`defaultEnabled: false` only sets the state at install time. It does not disable a plugin
+someone has already enabled — that is a `settings.json` edit, and deliberately theirs to make.
 
 ## MCP servers
 
@@ -158,6 +169,20 @@ marketplace you own: the doctor finds it automatically.
 
 - Every skill is `plugins/<plugin>/skills/<name>/SKILL.md` with YAML frontmatter whose
   `name` matches its directory.
+- **Quote any `description:` containing a colon-space.** Unquoted, YAML reads `Use for X: y`
+  as a nested mapping and the whole frontmatter fails to parse — the skill then loads with
+  every field silently dropped, so it is never matched. Three files shipped this way before
+  `claude plugin validate --strict` caught them.
+- Agent frontmatter carries a baseline beyond `name`/`description`/`tools`: `maxTurns`
+  (30 read-only, 40 writers) bounds a runaway loop, and read-only agents add
+  `disallowedTools: Write, Edit, NotebookEdit`. Judgment-heavy reviewers — `theme-reviewer`,
+  `section-architect`, `deliverability-release-reviewer` — also set `effort: high`.
+  **`model` is deliberately never set**: an agent inherits the session model, which is right
+  unless there is strong reason otherwise, and a pinned tier silently caps quality later.
+- **`tools:` is an allow-list, and `Bash` is in it for every "read-only" agent.** Fourteen
+  agents describe themselves as read-only and can still write via `Bash` (`>`, `sed -i`,
+  `cp`). `disallowedTools` does not close that — it blocks the `Write`/`Edit` tools, not the
+  shell. Read "read-only" as convention plus prompt, not as an enforced boundary.
 - Three marketplace manifests are kept byte-identical: `.claude-plugin/`,
   `.agents/plugins/`, `.cursor-plugin/`. A plugin registered in only one of them will not
   resolve for the other runtimes. (The `.agents/` mirror goes away with the Codex cut.)

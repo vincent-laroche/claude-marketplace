@@ -5,5 +5,15 @@
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Shopify Storefront",
+  "keywords": [
+    "shopify",
+    "liquid",
+    "theme",
+    "horizon",
+    "ecommerce"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/storefront"
 }

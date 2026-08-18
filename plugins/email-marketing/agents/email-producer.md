@@ -2,6 +2,7 @@
 name: email-producer
 description: Scoped local writer for approved Hair Solutions Co. email briefs, content modules, and MailerLite-ready HTML. Use after the brief and source authority are verified.
 tools: Read, Glob, Grep, Edit, Write, MultiEdit, Bash
+maxTurns: 40
 ---
 
 # Email Producer

@@ -2,6 +2,18 @@
   "name": "hs-marketing",
   "version": "0.1.0",
   "description": "Hair Solutions Co. marketing suite: content creation, campaign planning, email sequences, SEO audits, performance reporting, and brand review — merged from Anthropic bases and enriched with the Atelier Zero v7 brand authority, HubSpot email modules, GA4/GTM, and Search Console tooling.",
-  "author": { "name": "Hair Solutions Co." },
-  "license": "UNLICENSED"
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED",
+  "displayName": "Marketing Suite",
+  "keywords": [
+    "campaigns",
+    "content",
+    "seo",
+    "reporting"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/hs-marketing",
+  "defaultEnabled": false
 }

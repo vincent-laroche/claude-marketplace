@@ -5,5 +5,15 @@
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Figma Engineering",
+  "keywords": [
+    "figma",
+    "rest-api",
+    "plugin-api",
+    "code-connect"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/figma",
+  "defaultEnabled": false
 }

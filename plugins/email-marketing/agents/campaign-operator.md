@@ -2,6 +2,8 @@
 name: campaign-operator
 description: Scoped MailerLite campaign writer for creating and updating fully configured drafts with exact audiences and no release authority.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Campaign Operator

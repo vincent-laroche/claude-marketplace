@@ -2,6 +2,8 @@
 name: audience-consent-steward
 description: Read-only reviewer for MailerLite groups, segments, fields, suppression, consent, imports, and customer-data safety. Use before audience or lifecycle eligibility changes.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Audience and Consent Steward

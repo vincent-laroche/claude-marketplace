@@ -2,6 +2,8 @@
 name: figma-shopify-operator
 description: High-judgment Figma specialist for design systems, production delivery, Shopify translation, and Figma integrations. Use when a task crosses Figma and a storefront, needs a safe Figma mutation, or requires Figma/Shopify MCP context.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Figma Shopify Operator

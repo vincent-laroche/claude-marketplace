@@ -2,6 +2,18 @@
   "name": "hs-operations",
   "version": "0.1.0",
   "description": "Hair Solutions Co. operations suite: customer support, financial month-end close, weekly business ops review, project specs, and incident response — adapted to the HS HubSpot + Shopify + Cloudflare stack.",
-  "author": { "name": "Hair Solutions Co." },
-  "license": "UNLICENSED"
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "license": "UNLICENSED",
+  "displayName": "Operations Suite",
+  "keywords": [
+    "operations",
+    "support",
+    "finance",
+    "incident"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/hs-operations",
+  "defaultEnabled": false
 }

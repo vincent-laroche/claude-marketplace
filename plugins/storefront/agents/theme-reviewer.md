@@ -2,6 +2,9 @@
 name: theme-reviewer
 description: Read-only reviewer for an Atelier Zero theme diff. Judges correctness, scope, Liquid and schema validity, theme-editor compatibility, accessibility, responsive behaviour, performance, brand, voice, claims safety, and release risk. Use after implementing a change and before any commit or release.
 tools: ["Read", "Glob", "Grep", "Bash"]
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
+effort: high
 ---
 
 # Theme reviewer

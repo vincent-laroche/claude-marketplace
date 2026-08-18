@@ -2,6 +2,8 @@
 name: drag-drop-module-designer
 description: MailerLite native-editor specialist for reusable drag-and-drop modules, ecommerce blocks, and saved templates. Use for dashboard-native, marketer-editable email construction.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Drag-and-Drop Module Designer

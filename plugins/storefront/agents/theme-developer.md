@@ -2,6 +2,7 @@
 name: theme-developer
 description: Runtime writer for net-new Atelier Zero theme construction — new sections, blocks, snippets, assets, config, and JSON templates — with write scope limited to the theme runtime directories, i.e. the development theme itself. Use for build work from a Section Design Brief or an explicit scoped build request, or to serve and smoke-test the development theme with shopify theme dev; a verified minimal edit to existing source stays with liquid-designer.
 tools: ["Read", "Glob", "Grep", "Bash", "Write", "Edit"]
+maxTurns: 40
 ---
 
 # Theme developer — net-new-build runtime writer

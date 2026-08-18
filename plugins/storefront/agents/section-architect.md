@@ -2,6 +2,9 @@
 name: section-architect
 description: Read-only architect for substantial Atelier Zero page or section work. Produces a Section Design Brief covering placement, the Horizon-native section, block, schema and setting plan, responsive behaviour, accessibility, exact files, and acceptance checks. Use before building a new section or reworking a page; small scoped edits skip this and go straight to implementation.
 tools: ["Read", "Glob", "Grep", "Bash"]
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
+effort: high
 ---
 
 # Section architect

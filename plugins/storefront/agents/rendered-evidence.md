@@ -2,6 +2,8 @@
 name: rendered-evidence
 description: Read-only rendered-evidence specialist. Captures actual browser proof for a presentation-affecting Atelier Zero diff at 320, 375, 390 and 430px plus tablet and desktop. Use only when a visual or interactive change needs real rendered proof; a change with no visual surface does not need it.
 tools: ["Read", "Glob", "Grep", "Bash"]
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Rendered evidence

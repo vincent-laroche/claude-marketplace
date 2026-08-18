@@ -2,6 +2,8 @@
 name: mobile-first
 description: Reviews any Atelier Zero page or section by how it behaves on phones first and desktop second. Flags horizontal overflow, touch-target size, fluid type, tap ergonomics, and mobile LCP at 320, 375, 390 and 430px. Use before shipping any customer-facing layout or when reviewing responsive behaviour.
 tools: ["Read", "Glob", "Grep", "Bash"]
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Mobile-first review

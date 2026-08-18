@@ -2,6 +2,8 @@
 name: performance-analyst
 description: Read-only MailerLite performance analyst for campaigns, automations, audiences, links, forms, ecommerce, and deliverability. Use for reporting and optimization decisions.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Performance Analyst

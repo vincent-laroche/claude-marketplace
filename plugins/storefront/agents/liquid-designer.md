@@ -2,6 +2,7 @@
 name: liquid-designer
 description: The scoped-change runtime writer for a verified Atelier Zero theme task. Implements the smallest literal reversible change inside the theme runtime directories, preserving Horizon theme-editor compatibility, dynamic sources, accessibility, and voice. Use only when the scope, target, and current value have already been verified against source; net-new theme builds route to theme-developer.
 tools: ["Read", "Glob", "Grep", "Bash", "Write", "Edit"]
+maxTurns: 40
 ---
 
 # Liquid designer — runtime writer

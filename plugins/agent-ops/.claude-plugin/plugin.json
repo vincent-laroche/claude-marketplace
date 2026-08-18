@@ -1,9 +1,18 @@
 {
   "name": "agent-ops",
   "version": "1.0.0",
-  "description": "Operating Agent Teams safely \u2014 runtime configuration, team design, task operations, review, worktree coordination, MCP integration, data protection, briefs, onboarding, and troubleshooting.",
+  "description": "Operating Agent Teams safely — runtime configuration, team design, task operations, review, worktree coordination, MCP integration, data protection, briefs, onboarding, and troubleshooting.",
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Agent Operations",
+  "keywords": [
+    "agents",
+    "teams",
+    "orchestration",
+    "mcp"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/agent-ops"
 }

@@ -1,9 +1,20 @@
 {
   "name": "media",
   "version": "1.0.0",
-  "description": "AI media production \u2014 Higgsfield model selection and production workflows, Magnific spaces/flows/designer, HeyGen avatar video, Mux streaming, and video content strategy.",
+  "description": "AI media production — Higgsfield model selection and production workflows, Magnific spaces/flows/designer, HeyGen avatar video, Mux streaming, and video content strategy.",
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "AI Media Production",
+  "keywords": [
+    "higgsfield",
+    "magnific",
+    "heygen",
+    "video",
+    "image"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/media",
+  "defaultEnabled": false
 }

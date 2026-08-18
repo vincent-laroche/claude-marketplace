@@ -1,9 +1,18 @@
 {
   "name": "design-review",
   "version": "1.0.0",
-  "description": "Design critique and QA \u2014 visual polish, designer-eye and frontend-craft review, product-flow audit, fidelity QA against a source, Figma extraction, and evidence-backed UX science auditing. Design-system, token and brand-identity work lives in the brand-design-system repo; see OVERLAP.md.",
+  "description": "Design critique and QA — visual polish, designer-eye and frontend-craft review, product-flow audit, fidelity QA against a source, Figma extraction, and evidence-backed UX science auditing. Design-system, token and brand-identity work lives in the brand-design-system repo; see OVERLAP.md.",
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Design Review",
+  "keywords": [
+    "critique",
+    "ux",
+    "fidelity",
+    "audit"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/design-review"
 }

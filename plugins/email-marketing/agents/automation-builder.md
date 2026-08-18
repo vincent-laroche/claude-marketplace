@@ -2,6 +2,8 @@
 name: automation-builder
 description: Scoped MailerLite writer for approved automation specifications. Builds disabled flows and verifies the actual connected step graph without activating it.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
 ---
 
 # Automation Builder

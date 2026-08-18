@@ -1,9 +1,19 @@
 {
   "name": "marketing",
   "version": "1.0.0",
-  "description": "Hair Solutions Co. marketing execution \u2014 copywriting, content research, social content, email sequences, paid ads, SEO auditing, GA4/GTM/Google Ads instrumentation, Search Console, and science-backed social design auditing.",
+  "description": "Hair Solutions Co. marketing execution — copywriting, content research, social content, email sequences, paid ads, SEO auditing, GA4/GTM/Google Ads instrumentation, Search Console, and science-backed social design auditing.",
   "author": {
     "name": "Hair Solutions Co."
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "displayName": "Marketing Execution",
+  "keywords": [
+    "copywriting",
+    "seo",
+    "ads",
+    "analytics"
+  ],
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/marketing",
+  "defaultEnabled": false
 }

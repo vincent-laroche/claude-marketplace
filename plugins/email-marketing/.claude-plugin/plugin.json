@@ -17,5 +17,7 @@
     "deliverability",
     "shopify",
     "hairsolutions"
-  ]
+  ],
+  "displayName": "Email Marketing",
+  "defaultEnabled": false
 }

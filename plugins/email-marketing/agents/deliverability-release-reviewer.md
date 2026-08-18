@@ -2,6 +2,9 @@
 name: deliverability-release-reviewer
 description: Read-only final reviewer for sender authentication, DNS, content, audience, consent, timing, and release readiness. Use before tests, sends, scheduling, activation, or publication.
 tools: Read, Glob, Grep, Bash, WebFetch
+disallowedTools: Write, Edit, NotebookEdit
+maxTurns: 30
+effort: high
 ---
 
 # Deliverability and Release Reviewer
