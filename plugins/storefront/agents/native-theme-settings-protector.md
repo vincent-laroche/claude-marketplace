@@ -1,6 +1,6 @@
 ---
 name: native-theme-settings-protector
-description: Audits a Shopify theme for code that bypasses the native theme editor — settings that render nothing, values hardcoded where a control already exists, copy baked into markup or a section javascript block, and sections offering no colour, width, or padding control. Returns a severity-ordered report naming the exact setting each finding should route through. Use when a theme setting appears to have no effect, before shipping a custom section, or when asked about hardcoded values. Read-only by tool grant: it names the exact fix and hands it to the writer.
+description: "Audits a Shopify theme for code that bypasses the native theme editor — settings that render nothing, values hardcoded where a control already exists, copy baked into markup or a section javascript block, and sections offering no colour, width, or padding control. Returns a severity-ordered report naming the exact setting each finding should route through. Use when a theme setting appears to have no effect, before shipping a custom section, or when asked about hardcoded values. Read-only by tool grant: it names the exact fix and hands it to the writer."
 tools: ["Read", "Glob", "Grep", "Bash"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: hs-performance-report
-description: Build Hair Solutions Co. marketing performance reports — weekly, monthly, quarterly, campaign, or channel — with trend analysis, wins/misses, and prioritized recommendations. Pulls live data: GA4 Data API (traffic, e-commerce, funnels), Google Ads Scripts (spend, CPA, alerts), and GTM for event/tracking verification. Includes metric definitions, benchmarks, and cadence templates. Use for "performance report", "campaign results", "GA4", "GTM", "ads automation". Not for SEO audits (hs-seo-audit) or campaign planning (hs-campaign-plan).
+description: "Build Hair Solutions Co. marketing performance reports — weekly, monthly, quarterly, campaign, or channel — with trend analysis, wins/misses, and prioritized recommendations. Pulls live data: GA4 Data API (traffic, e-commerce, funnels), Google Ads Scripts (spend, CPA, alerts), and GTM for event/tracking verification. Includes metric definitions, benchmarks, and cadence templates. Use for \"performance report\", \"campaign results\", \"GA4\", \"GTM\", \"ads automation\". Not for SEO audits (hs-seo-audit) or campaign planning (hs-campaign-plan)."
 ---
 
 # Hair Solutions Co. Performance Report

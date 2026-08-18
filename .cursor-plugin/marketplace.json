@@ -1,11 +1,14 @@
 {
-  "name": "claude-marketplace",
+  "name": "toolkit-marketplace",
   "owner": {
     "name": "Hair Solutions Co."
   },
   "metadata": {
     "description": "Vincent Laroche's working toolkit — Hair Solutions Co. business skills, storefront and brand systems, agent operations, and media production.",
     "version": "0.3.0"
+  },
+  "renames": {
+    "brand": null
   },
   "plugins": [
     {

@@ -1,10 +1,20 @@
-# claude-marketplace
+# toolkit-marketplace
 
 Vincent Laroche's working toolkit — a Claude Code / Codex / Cursor plugin marketplace.
 
-Repo: `vincent-laroche/claude-marketplace`. Marketplace name: `claude-marketplace` — the name
+Repo: `vincent-laroche/claude-marketplace`. Marketplace name: `toolkit-marketplace` — the name
 used in `plugin@name`, the install directory, and the cache path. Repo and marketplace name
-are deliberately kept identical; they were `marketplace` and `atelier` until 2026-08-18.
+deliberately differ, as they did originally.
+
+**The name may not begin with `claude-` followed by a category noun.** Claude Code rejects
+names that impersonate an official marketplace, re-checking on *every* load rather than only
+at registration, so a bad name breaks every plugin at once. `claude-marketplace` and
+`claude-plugins` both fail `claude plugin validate`; a suffix does not rescue them
+(`claude-marketplace-hs` fails too) though a prefix does. `claude-skills`, `claude-agents` and
+`claude-tools` pass — the block is on claiming to *be* the Claude marketplace, not on the word
+`claude`. Names were `marketplace`/`atelier`, then briefly `claude-marketplace` (broken, ~1h),
+now `toolkit-marketplace` as of 2026-08-18. Run `claude plugin validate .` before ever
+changing it again.
 
 Replaces `hairsolutionsco-ai-toolkit`, which is now `vincent-laroche/agents-marketplace`.
 
@@ -32,11 +42,11 @@ Register the marketplace, then enable only the plugins a project needs:
 ```jsonc
 // ~/.claude/settings.json
 "extraKnownMarketplaces": {
-  "claude-marketplace": { "source": { "source": "github", "repo": "vincent-laroche/claude-marketplace" } }
+  "toolkit-marketplace": { "source": { "source": "github", "repo": "vincent-laroche/claude-marketplace" } }
 },
 "enabledPlugins": {
-  "storefront@claude-marketplace": true,
-  "design-review@claude-marketplace": true
+  "storefront@toolkit-marketplace": true,
+  "design-review@toolkit-marketplace": true
 }
 ```
 
@@ -151,6 +161,12 @@ marketplace you own: the doctor finds it automatically.
 - Three marketplace manifests are kept byte-identical: `.claude-plugin/`,
   `.agents/plugins/`, `.cursor-plugin/`. A plugin registered in only one of them will not
   resolve for the other runtimes. (The `.agents/` mirror goes away with the Codex cut.)
+  This drifts silently — `.agents/` was still carrying `"name": "atelier"` two renames later,
+  because only the Claude and Cursor pair get diffed. Check all three.
+- Removing or renaming a plugin needs a top-level `renames` entry (`"brand": null` for a
+  removal, `"old": "new"` for a rename), or existing users hit `plugin-not-found` instead of
+  migrating. Treat it as append-only history: never edit an old entry, add another and let
+  Claude Code follow the chain. Requires Claude Code v2.1.193+.
 - `design-review` consolidates four former stacks. The 2026-08-10 overlap cut took it 15 → 8;
   the 2026-08-18 design-system cut took it 8 → 4. What was removed and why is in
   `plugins/design-review/OVERLAP.md`, and every removed skill is recoverable from git history.

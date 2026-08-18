@@ -1,6 +1,6 @@
 ---
 name: hs-content-creation
-description: Draft Hair Solutions Co. marketing content across channels — blog posts, social media, email newsletters, landing pages, product pages, press releases, case studies. Use when writing marketing copy: headlines, hooks, CTAs, captions, content briefs, or content calendars. Covers research → brief → draft → QA with brand voice rules and platform playbooks. Not for SEO audits (hs-seo-audit), email automation flows (hs-email-sequence), campaign plans (hs-campaign-plan), or brand compliance (hs-brand-review).
+description: "Draft Hair Solutions Co. marketing content across channels — blog posts, social media, email newsletters, landing pages, product pages, press releases, case studies. Use when writing marketing copy: headlines, hooks, CTAs, captions, content briefs, or content calendars. Covers research → brief → draft → QA with brand voice rules and platform playbooks. Not for SEO audits (hs-seo-audit), email automation flows (hs-email-sequence), campaign plans (hs-campaign-plan), or brand compliance (hs-brand-review)."
 ---
 
 # Hair Solutions Co. Content Creation
