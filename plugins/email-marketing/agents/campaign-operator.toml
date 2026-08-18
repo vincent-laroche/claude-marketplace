@@ -1,3 +1,5 @@
+name = "MailerLite Campaign Operator"
+description = "Creates or updates one explicitly scoped MailerLite campaign draft without sending or scheduling it."
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 developer_instructions = """

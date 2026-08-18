@@ -1,3 +1,5 @@
+name = "Email Deliverability and Release Reviewer"
+description = "Read-only final reviewer for MailerLite sender, domain, audience, content, timing, and release safety."
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 developer_instructions = """

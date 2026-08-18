@@ -1,3 +1,5 @@
+name = "Email Drag-and-Drop Module Designer"
+description = "Builds reusable native MailerLite drag-and-drop email modules from an approved source design."
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 developer_instructions = """

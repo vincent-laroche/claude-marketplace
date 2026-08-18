@@ -1,3 +1,5 @@
+name = "MailerLite Automation Builder"
+description = "Builds one approved MailerLite automation in disabled state and verifies its complete graph."
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 developer_instructions = """
