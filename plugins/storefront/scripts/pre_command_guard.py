@@ -22,8 +22,13 @@ change should be reviewable; use the CLI when speed matters more.
 Still blocked, because neither is a deploy:
   - `theme delete`  destroys a theme irreversibly
   - `app deploy` / `app release` / `hydrogen deploy`  different product surface
-  - raw `git push` in Bash  runs through Desktop Commander (FUSE breaks locks)
-    and is a separate approval per .claude/rules/work-authorization.md
+
+`git push` is NOT blocked here. It was until 2026-08-18, and the block had two
+faults: a plugin hook wins over .claude/settings.json, so an explicit "commit
+and push" instruction could not be carried out at all; and the pattern matched
+the phrase anywhere in the command, so a `git commit` whose message discussed
+pushing was refused. The project escalates push through settings.json's `ask`
+list instead. Do not re-add it here.
 
 Exit 0 = allow. Exit 2 = block (stderr is shown to the model).
 """
@@ -55,8 +60,6 @@ def main():
          "`shopify theme delete` destroys a theme irreversibly and is not a deploy. Ask Vincent explicitly if you need it."),
         (CMD + r"shopify\s+(app\s+(deploy|release)|hydrogen\s+deploy)\b",
          "App and Hydrogen deploys are a different product surface and are not authorized here."),
-        (CMD + r"git\s+push\b",
-         "Run git through Desktop Commander, not the Bash sandbox (FUSE breaks git locks). Use storefront-release."),
     ]
     for pat, msg in blocked:
         if re.search(pat, low):
