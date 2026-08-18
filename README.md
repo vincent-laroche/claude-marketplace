@@ -106,6 +106,44 @@ tooling`, `preserve browser QA MCP`, `add native-theme-settings-protector agent`
 - Before committing, check the index holds only your files: `git diff --cached --stat`.
 - Re-fetch immediately before pushing; the tip moves.
 
+## The cache is not the repository
+
+`~/.claude/plugins/marketplaces/<name>/` is a clone Claude Code manages for you.
+Authoring there is the failure mode this repository has actually suffered: the
+`figma-import-html-to-sites` skill was committed only into that cache during the
+`marketplace` → `claude-marketplace` rename and reached nobody. It was found by
+accident weeks later, at which point the cache was 4 commits ahead and 6 behind
+its own remote. A commit into a cache succeeds, looks ordinary, and is discarded
+the next time the plugin system resets it.
+
+| Path | Role |
+|---|---|
+| `~/03_agents/claude-marketplace` | Author here |
+| `~/07_design/brand/brand-design-marketplace` | Author here — brand |
+| `~/.claude/plugins/marketplaces/…` | Managed cache. Consume only. |
+
+Two guards, both installed by the same script:
+
+```bash
+python3 scripts/marketplace_doctor.py                  # report, exit 1 on drift
+python3 scripts/marketplace_doctor.py --no-fetch       # offline
+python3 scripts/marketplace_doctor.py --install-guards # (re)install pre-commit guards
+```
+
+**The report** walks every installed cache and prints ahead/behind/dirty. Caches
+whose remote is yours are judged — unpushed commits or a dirty tree exits 1.
+Third-party caches are reported only; being 900 commits behind is staleness, not
+data loss, because you never commit into them. Run it before any release.
+
+**The guard** is a `pre-commit` hook written into the caches you own. It refuses
+the commit and names the authoring checkout, which it resolves by matching
+remotes. It works in any client — Claude Code, Codex, a plain terminal — because
+it lives in git rather than in an agent's configuration.
+
+Reinstalling a marketplace wipes its `.git/hooks`, so re-run `--install-guards`
+after adding one. That is also the only step needed for a newly installed
+marketplace you own: the doctor finds it automatically.
+
 ## Conventions
 
 - Every skill is `plugins/<plugin>/skills/<name>/SKILL.md` with YAML frontmatter whose
