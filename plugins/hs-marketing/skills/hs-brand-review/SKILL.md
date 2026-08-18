@@ -153,12 +153,10 @@ Mirror of the design-system skill's operative rules. Re-verify against the live 
 
 ### Palette and surfaces
 
-- Paper `#EAE0C9` is the grain-bearing canvas.
-- Wash `#EDE3CC`, Canvas Shaded `#E4DBC4`, and Raised `#F6EFD9` form the light surface ramp.
-- Text Ink `#151411` owns headings and controls; Body Ink `#25221D` owns running copy.
-- Ink Panel `#181714` is the one deliberate dark interruption.
-- Coral `#EA6452` is the only saturated UI color and stays under roughly 10% of a composition.
-- Printed ochre `#C0893B` and printed coral `#DA6F4B` are commissioned-artwork colors only.
+- Paper `#EFE7D2` is the grain-bearing canvas. Paper Warm `#ECE4CF` is the alternate warm surface, Paper Dark `#DDD2B6` the secondary and commerce surface, and Bone `#F7F1DE` the raised card surface.
+- Ink `#15140F` owns headings, controls and the dark-section surface. Ink Soft `#2A2620` is secondary dark and strong border; Ink Mute `#5A5448` is muted but readable text; Ink Faint `#8B8676` is decorative numerals and nonessential marks only.
+- Coral `#ED6F5C` is the primary action and the only saturated UI color, staying under roughly 10% of a composition. Coral Soft `#F08E7C` is one emphasis on dark surfaces.
+- Olive `#6E7448` is utility and success. Mustard `#E9B94A` is focus reinforcement and caution only, never decorative.
 - Do not introduce gradients, glass effects, pure-white cards, arbitrary status colors, or undocumented aliases.
 
 ### Type

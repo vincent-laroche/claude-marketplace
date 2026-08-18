@@ -60,7 +60,7 @@ def main() -> int:
         SKILL_ROOT / "SKILL.md": (
             "Atelier Zero v7",
             "$atelier-zero-brand-compliance",
-            "#EA6452",
+            "#ED6F5C",
             "1300px",
             "H3 32px",
             "H4 22px",

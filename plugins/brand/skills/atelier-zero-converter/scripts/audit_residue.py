@@ -27,7 +27,7 @@ ATELIER_HEX = {
 }
 
 RETIRED_HEX = {
-    "#0F0F0F": "Ink role now resolves through the current Atelier Zero source",
+    "#0F0F0F": "retired Ink Black; the Ink role now resolves through the current Atelier Zero source",
     "#1B1B1B": "retired Body Black",
     "#2A2929": "retired Soft Black",
     "#14213D": "retired Harbor Navy",

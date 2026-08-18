@@ -193,19 +193,29 @@ Do not use old paths under `/Users/vMac/01_projects`, `/Users/vMac/04_marketing`
 
 Email is not web. Use table-based structure, inline critical styles, a 600px wrapper, 568px internal cards where applicable, a 480px mobile breakpoint, and readable behaviour with images blocked.
 
-Current email-module palette is **Core Palette v1** (seven colours), per `specs/PLATFORM_EMAIL.md` in `brand-design-system` — the authoritative source, verified 2026-07-03:
+The email palette is the Atelier Zero set, per `specs/PLATFORM_EMAIL.md` in `brand-design-system` — the authoritative source, re-verified 2026-08-18:
 
-| Hex | Name | Role |
+**Three main surfaces, and only three.** A main surface is the background of a header, a footer, or any main section.
+
+| Hex | Name | Use as a main surface |
 | --- | --- | --- |
-| `#0F0F0F` | Ink Black | Highest-contrast ink, wordmark text, primary CTA fill on light |
-| `#1B1B1B` | Body Black | Primary body text, footer authority, default dark panel |
-| `#2A2929` | Soft Black | Secondary text, dark card surface, footer hierarchy |
-| `#14213D` | Harbor Navy | Dark authority panels, structured support modules, selected state |
-| `#E5E5E5` | Soft Silver | Email body background, light card surface, text on dark |
-| `#D6D6D6` | Muted Silver | Borders, dividers, muted fields, secondary light fills |
-| `#A63E1B` | Copper Clay | Small accent only — eyebrow, focus cue, proof marker, small rule. **Never the default CTA fill.** |
+| `#EFE7D2` | Paper | The light section surface, and the email body behind it |
+| `#15140F` | Ink | The dark section surface |
+| `#ED6F5C` | Coral | Accent block. At most one per email, never on a header or footer |
 
-This replaces the pre-migration six-colour palette. If a module (local source or live Design Manager) still uses `#333533` (old "Deep Charcoal", now split into Body Black / Soft Black) or `#E06A2A` (old Copper Clay), that is exactly the residue the cleanup scans in step 6 should catch and migrate.
+Everything else is **supporting**: permitted on inset elements *inside* a section, on dividers, or as text. Never as a section background.
+
+| Hex | Name | Permitted use |
+| --- | --- | --- |
+| `#F7F1DE` | Bone | Text on Ink; a raised inset panel on Paper |
+| `#DDD2B6` | Paper Dark | Dividers and rules on Paper; secondary text on Ink; a recessed inset panel on Paper |
+| `#2A2620` | Ink Soft | Dividers and rules on Ink; an inset panel on Ink |
+| `#5A5448` | Ink Mute | Muted body copy and captions on light |
+| `#F08E7C` | Coral Soft | Limited emphasis on Ink panels |
+| `#6E7448` | Olive | Success or structured utility state only |
+| `#E9B94A` | Mustard | Focus/caution utility only; not decorative |
+
+**Core Palette v1 is retired.** If a module — local source or live Design Manager — still carries `#0F0F0F` Ink Black, `#1B1B1B` Body Black, `#2A2929` Soft Black, `#14213D` Harbor Navy, `#E5E5E5` Soft Silver, `#D6D6D6` Muted Silver or `#A63E1B` Copper Clay, that is residue to migrate, and `atelier-zero-converter`'s `audit_residue.py` already flags every one of them. The older `#333533` Deep Charcoal and `#E06A2A` Copper Clay are residue too.
 
 Approved logo masters live in `/Users/vMac/08_brand/Hair Solutions Co Logos`. Email-safe cropped exports are in HubSpot File Manager under `brand/hair-solutions-co-logos/email-exports/`. Light modules use ink logos; dark modules use soft-silver logos.
 
