@@ -1,3 +1,5 @@
+name = "Storefront Section Architect"
+description = "Read-only architect for substantial Shopify page, section, schema, and block work."
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 developer_instructions = """

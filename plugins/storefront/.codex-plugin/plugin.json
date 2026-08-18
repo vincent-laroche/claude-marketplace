@@ -1,0 +1,35 @@
+{
+  "name": "storefront",
+  "version": "2.1.0+codex.20260818183737",
+  "description": "Hair Solutions Co. Shopify storefront engineering \u2014 Horizon theme sections and blocks, metaobjects and metafields, custom product and order options, Cloudinary media, Help Center, CSS-to-Liquid translation, abnormality auditing, and the GitHub-synced release workflow. Ships 8 specialized agents, curated skills, Desktop Commander, and safety hooks.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/marketplace/tree/main/plugins/storefront",
+  "license": "UNLICENSED",
+  "keywords": [
+    "shopify",
+    "storefront",
+    "liquid",
+    "theme-development",
+    "desktop-commander",
+    "hairsolutions"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Storefront",
+    "shortDescription": "Shopify storefront engineering and safe release workflows.",
+    "longDescription": "Hair Solutions Co. Shopify storefront engineering for Horizon theme sections and blocks, metaobjects and metafields, custom options, Cloudinary media, Help Center, validation, and GitHub-synced releases. Includes specialized agents, curated skills, Desktop Commander, and safety hooks.",
+    "developerName": "Hair Solutions Co.",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills",
+      "MCP"
+    ],
+    "defaultPrompt": [
+      "Use storefront for this Shopify theme task."
+    ]
+  }
+}
