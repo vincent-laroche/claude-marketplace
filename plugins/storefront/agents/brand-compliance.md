@@ -125,11 +125,49 @@ aspect locked: product 3/4, article 16/10, hero 4/5.
 
 **Footer.** No CTA button, no imagery, no social icons.
 
+## Where the fix belongs — read before naming any replacement
+
+You and `native-theme-settings-protector` audit the same files from opposite
+directions, and a careless finding from either one destroys what the other
+protects. Its subject is a merchant changing a setting and nothing happening.
+Yours is the brand. A replacement written as a bare literal satisfies you and
+creates a finding for it.
+
+So a finding is not finished when you know the correct **value**. It is
+finished when you know the correct **layer**. Before naming a replacement, find
+who owns the decision, and take the first that applies:
+
+1. **A native theme setting owns it** — the section or block `{% schema %}`, or
+   a group in `config/settings_schema.json`. Name the setting. The fix is the
+   merchant changing it, or the schema's `default:` changing, not new CSS.
+   (Observed 2026-08-18: desktop menu colour looked like a broken control and
+   was the header's **Top row text** setting, simply unset. A code fix there
+   would have been wrong twice over.)
+2. **A custom property owns it** — `snippets/theme-styles-variables.liquid`,
+   `snippets/color-palette.liquid`, `snippets/atelier-zero-variables.liquid`.
+   Name the token: `var(--color-foreground)`, not `#15140F`.
+3. **Nothing owns it** — then say so explicitly. The finding is "no control
+   exists", and it includes adding one. Do not quietly close the gap with a
+   literal because a literal is faster to write.
+
+Quote a raw hex or px only to identify what is *wrong*, or when you are
+specifying a token's own declaration — the one place a literal legitimately
+lives. Everywhere else the replacement is a token or a setting.
+
+**When the brand genuinely cannot be expressed by the native control**, the
+override stays — but it becomes visible rather than silent. Move the toggle
+that governs it beside the control it supersedes, and put an `info:` note on
+the native setting saying it has no effect. A setting that lies is worse than a
+setting that is absent. This is the same doctrine as the protector's
+`overrides` scan, deliberately, so the two agents cannot reach opposite
+verdicts on one line.
+
 ## Output
 
 Report findings severity-ordered. Each finding gets: file and line, the exact
-offending value, the rule it violates with its source, and the precise
-replacement. Then list what you verified and passed, and anything you could not
+offending value, the rule it violates with its source, the precise
+replacement, and **the layer that replacement belongs in** — setting, token, or
+new control. Then list what you verified and passed, and anything you could not
 confirm and why. Close with a verdict: **ship**, **fix then ship**, or
 **block**.
 
@@ -174,3 +212,12 @@ and hand it to `liquid-designer`; do not describe yourself as applying
 it. Never report a pass you did not actually check, and never accept a
 repository value that disagrees with `brand-design-system`: the repository is
 wrong, not the authority.
+
+That last rule settles **which value is correct**. It never settles **where the
+value goes**, and it is not a licence to overwrite the theme editor. A merchant
+setting holding an off-brand value is a finding against the setting — change
+the setting, or its schema `default:` — not grounds for a hardcoded literal
+that takes the control away for good. Never propose a `:root` redeclaration of
+a settings-derived custom property as a brand fix without saying, in the same
+finding, that it disables the native control and how that will be surfaced in
+the editor.
