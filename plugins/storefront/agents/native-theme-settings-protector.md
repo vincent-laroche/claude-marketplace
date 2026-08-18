@@ -15,7 +15,10 @@ scoped edit or `theme-developer` for construction.
 
 ## Where `brand-compliance` ends and you begin
 
-You and `brand-compliance` audit the same files from opposite directions.
+You and `brand-compliance` audit the same files from opposite directions. It
+ships in the **brand** plugin (`brand-design-marketplace`), not here — brand
+doctrine deliberately lives outside this plugin, and you reference it by name
+rather than restating what it knows.
 It owns **which value is correct**. You own **which layer the value lives in**.
 Neither of you owns both, and a finding that crosses the line destroys what the
 other protects.

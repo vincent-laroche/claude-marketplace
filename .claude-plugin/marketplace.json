@@ -4,15 +4,15 @@
     "name": "Hair Solutions Co."
   },
   "metadata": {
-    "description": "Vincent Laroche's working toolkit \u2014 Hair Solutions Co. business skills, storefront and brand systems, agent operations, and media production.",
+    "description": "Vincent Laroche's working toolkit — Hair Solutions Co. business skills, storefront and brand systems, agent operations, and media production.",
     "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "storefront",
       "source": "./plugins/storefront",
-      "description": "Hair Solutions Co. Shopify storefront engineering \u2014 Horizon theme sections and blocks, metaobjects and metafields, custom product and order options, Cloudinary media, Help Center, CSS-to-Liquid translation, abnormality auditing, and the GitHub-synced release workflow. Ships 8 subagents in paired Claude and Codex form \u2014 section architect, two scoped writers (theme developer, Liquid designer), theme reviewer, rendered-evidence capture, and brand, mobile-first and SEO auditors \u2014 plus a write-boundary hook.",
-      "version": "2.1.0",
+      "description": "Hair Solutions Co. Shopify storefront engineering — Horizon theme sections and blocks, metaobjects and metafields, custom product and order options, Cloudinary media, Help Center, CSS-to-Liquid translation, abnormality auditing, and the GitHub-synced release workflow. Ships 8 subagents in paired Claude and Codex form — section architect, two scoped writers (theme developer, Liquid designer), theme reviewer, rendered-evidence capture, native theme-settings protector, and mobile-first and SEO auditors — plus a write-boundary hook. Brand authority lives in the brand-design-marketplace, not here.",
+      "version": "3.0.0",
       "author": {
         "name": "Hair Solutions Co."
       }
@@ -20,7 +20,7 @@
     {
       "name": "marketing",
       "source": "./plugins/marketing",
-      "description": "Hair Solutions Co. marketing execution \u2014 copywriting, content research, social content, email sequences, paid ads, SEO auditing, GA4/GTM/Google Ads instrumentation, Search Console, and science-backed social design auditing.",
+      "description": "Hair Solutions Co. marketing execution — copywriting, content research, social content, email sequences, paid ads, SEO auditing, GA4/GTM/Google Ads instrumentation, Search Console, and science-backed social design auditing.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -29,7 +29,7 @@
     {
       "name": "email-marketing",
       "source": "./plugins/email-marketing",
-      "description": "Hair Solutions Co. MailerLite email operations \u2014 account preflight, copy briefs, production HTML, native drag-and-drop modules, campaign drafts, audiences and consent, lifecycle automations, Shopify ecommerce data, forms, deliverability, analytics, and controlled release. Ships 13 skills, 8 paired Claude and Codex agents, the official OAuth MCP, validators, and safety hooks.",
+      "description": "Hair Solutions Co. MailerLite email operations — account preflight, copy briefs, production HTML, native drag-and-drop modules, campaign drafts, audiences and consent, lifecycle automations, Shopify ecommerce data, forms, deliverability, analytics, and controlled release. Ships 13 skills, 8 paired Claude and Codex agents, the official OAuth MCP, validators, and safety hooks.",
       "version": "1.0.0+codex.20260818181954",
       "author": {
         "name": "Hair Solutions Co."
@@ -38,7 +38,7 @@
     {
       "name": "crm",
       "source": "./plugins/crm",
-      "description": "Hair Solutions Co. HubSpot CRM (portal 50966981) \u2014 data model, business operations and automation strategy, developer integrations, step-by-step UI procedures, and Design Manager email modules.",
+      "description": "Hair Solutions Co. HubSpot CRM (portal 50966981) — data model, business operations and automation strategy, developer integrations, step-by-step UI procedures, and Design Manager email modules.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -47,7 +47,7 @@
     {
       "name": "hs-sales",
       "source": "./plugins/hs-sales",
-      "description": "Hair Solutions Co. sales suite: client research, consultation prep, call summaries, competitive intel, outreach, deal assets, daily briefing, pipeline review, and revenue forecasting \u2014 adapted to the HS HubSpot CRM, Shopify storefront, and appointment-driven business model.",
+      "description": "Hair Solutions Co. sales suite: client research, consultation prep, call summaries, competitive intel, outreach, deal assets, daily briefing, pipeline review, and revenue forecasting — adapted to the HS HubSpot CRM, Shopify storefront, and appointment-driven business model.",
       "version": "0.1.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -56,7 +56,7 @@
     {
       "name": "hs-operations",
       "source": "./plugins/hs-operations",
-      "description": "Hair Solutions Co. operations suite: customer support, financial month-end close, weekly business ops review, project specs, and incident response \u2014 adapted to the HS HubSpot + Shopify + Cloudflare stack.",
+      "description": "Hair Solutions Co. operations suite: customer support, financial month-end close, weekly business ops review, project specs, and incident response — adapted to the HS HubSpot + Shopify + Cloudflare stack.",
       "version": "0.1.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -65,7 +65,7 @@
     {
       "name": "hs-marketing",
       "source": "./plugins/hs-marketing",
-      "description": "Hair Solutions Co. marketing suite: content creation, campaign planning, email sequences, SEO audits, performance reporting, and brand review \u2014 merged from Anthropic bases and enriched with the Atelier Zero v7 brand authority, HubSpot email modules, GA4/GTM, and Search Console tooling.",
+      "description": "Hair Solutions Co. marketing suite: content creation, campaign planning, email sequences, SEO audits, performance reporting, and brand review — merged from Anthropic bases and enriched with the Atelier Zero v7 brand authority, HubSpot email modules, GA4/GTM, and Search Console tooling.",
       "version": "0.1.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -74,7 +74,7 @@
     {
       "name": "media",
       "source": "./plugins/media",
-      "description": "AI media production \u2014 Higgsfield model selection and production workflows, Magnific spaces/flows/designer, HeyGen avatar video, Mux streaming, and video content strategy.",
+      "description": "AI media production — Higgsfield model selection and production workflows, Magnific spaces/flows/designer, HeyGen avatar video, Mux streaming, and video content strategy.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -83,7 +83,7 @@
     {
       "name": "design-review",
       "source": "./plugins/design-review",
-      "description": "Design critique and QA \u2014 visual polish, designer-eye and frontend-craft review, product-flow audit, fidelity QA against a source, Figma extraction, and evidence-backed UX science auditing. Design-system, token and brand-identity work lives in the brand-design-system repo; see OVERLAP.md.",
+      "description": "Design critique and QA — visual polish, designer-eye and frontend-craft review, product-flow audit, fidelity QA against a source, Figma extraction, and evidence-backed UX science auditing. Design-system, token and brand-identity work lives in the brand-design-system repo; see OVERLAP.md.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -92,7 +92,7 @@
     {
       "name": "integrations",
       "source": "./plugins/integrations",
-      "description": "Connective tissue \u2014 Notion, n8n, Composio app connections, Instagram, HubSpot integration, Cloudflare operations for hairsolutions.co, and Figma REST automation.",
+      "description": "Connective tissue — Notion, n8n, Composio app connections, Instagram, HubSpot integration, Cloudflare operations for hairsolutions.co, and Figma REST automation.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."
@@ -110,7 +110,7 @@
     {
       "name": "agent-ops",
       "source": "./plugins/agent-ops",
-      "description": "Operating Agent Teams safely \u2014 runtime configuration, team design, task operations, review, worktree coordination, MCP integration, data protection, briefs, onboarding, and troubleshooting.",
+      "description": "Operating Agent Teams safely — runtime configuration, team design, task operations, review, worktree coordination, MCP integration, data protection, briefs, onboarding, and troubleshooting.",
       "version": "1.0.0",
       "author": {
         "name": "Hair Solutions Co."

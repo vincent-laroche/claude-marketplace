@@ -1,6 +1,6 @@
 ---
 name: storefront-build
-description: Write or edit Liquid sections, blocks and snippets for the hairsolutions.co storefront against the current Hair Solutions Co. design system. Use for any .liquid section, block, snippet, schema, or theme-editor wiring. Single Color Palette, design tokens, Inter Tight and Inter.
+description: Write or edit Liquid sections, blocks and snippets for the hairsolutions.co storefront against the current Hair Solutions Co. design system. Use for any .liquid section, block, snippet, schema, or theme-editor wiring. Single Color Palette, design tokens, and the theme-editor wiring that carries them.
 ---
 
 # Storefront build
@@ -38,19 +38,19 @@ Never hardcode a token value that already exists as a custom property.
 
 ## Definition of Done (check every item before committing)
 
-- **Radii:** `--r-pill` `999px` buttons, badges, chips, avatars; `--r-lg` `20px` cards, panels,
-  dialogs; `--r-md` `12px` nested small surfaces; `--r-sm` `4px` inputs and multiline fields.
-- **Colour:** design-system tokens only, no hardcoded hex. Coral `#ED6F5C` is the only CTA
-  fill and its text is Ink `#15140F` — never white on Coral. Papers `#EFE7D2` `#ECE4CF`
-  `#DDD2B6`, bone `#F7F1DE`, ink scale `#15140F` `#2A2620` `#5A5448` `#8B8676`.
-- **Coral discipline:** under roughly 10% of a composition, once per view where possible,
-  never on body text, never repeated decorative trim across a grid or list.
-- **Type:** Inter Tight (headings, controls), Inter (body), JetBrains Mono (prices, specs,
-  eyebrows), Playfair Display **italic inline emphasis inside a heading only** — never a
-  standalone Playfair heading. Nothing else.
+- **Radii:** use the `--r-*` tokens by role — pill for buttons and badges, large for cards
+  and panels, medium for nested surfaces, small for inputs. The values behind them are
+  brand authority and live in `foundations/spacing.md`; never inline a px radius.
+- **Colour:** design-system tokens only, never a hardcoded hex. The palette itself is
+  brand authority and is not restated here — `foundations/color.md` owns it, including
+  the CTA fill, its required text colour, and how sparingly the accent may be used.
+- **Type:** the four families and their roles are owned by `foundations/typography.md`.
+  Use the token, not a font name.
 - **Backgrounds:** flat token fills. No gradients, patterns or glass. Never two dark sections
   adjacent, never Ink as the global page background. Keep the paper grain.
-- **Grids:** three columns desktop maximum, two at 768–1024, one on mobile. Never four.
+- **Grids:** column counts and their responsive collapse are owned by
+  `foundations/spacing.md`, which also records the carve-outs. Read it rather than
+  assuming a maximum.
 - **Spacing:** the token scale; `clamp()` for fluid sizing.
 - **Mobile:** side padding 20–28px, no horizontal scroll, touch targets at least 44×44px.
   QA at 320/375/390/430. Mobile styles are part of the deliverable, not a follow-up.
