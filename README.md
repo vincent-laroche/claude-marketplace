@@ -1,9 +1,9 @@
-# atelier
+# claude-marketplace
 
 Vincent Laroche's working toolkit — a Claude Code / Codex / Cursor plugin marketplace.
 
-Repo: `vincent-laroche/marketplace`. Marketplace name: `atelier` (the name used in `plugin@name`;
-it deliberately differs from the repo name, same as `hairsolutionsco` lives in
+Repo: `vincent-laroche/claude-marketplace`. Marketplace name: `claude-marketplace` (the name used in
+`plugin@name`; it deliberately differs from the repo name, same as `hairsolutionsco` lives in
 `hairsolutionsco-ai-toolkit`).
 
 Replaces `hairsolutionsco-ai-toolkit`. That repo stays in place until this one is proven.
@@ -15,11 +15,11 @@ Register the marketplace, then enable only the plugins a project needs:
 ```jsonc
 // ~/.claude/settings.json
 "extraKnownMarketplaces": {
-  "atelier": { "source": { "source": "github", "repo": "vincent-laroche/marketplace" } }
+  "claude-marketplace": { "source": { "source": "github", "repo": "vincent-laroche/claude-marketplace" } }
 },
 "enabledPlugins": {
-  "storefront@atelier": true,
-  "brand@atelier": true
+  "storefront@claude-marketplace": true,
+  "brand@claude-marketplace": true
 }
 ```
 
