@@ -85,9 +85,10 @@ Coral. Coral on a paper surface fails contrast badly at small sizes; observed
 migration would not have rescued it — authority Coral on paper-dark is 1.99:1,
 worse than what shipped.
 
-`config/settings_data.json` currently holds an older generation (`#EA6452`,
-`#151411`, `#F6EFD9`, …). That drift is known and deliberately deferred — report
-it if asked, but do not raise it as a finding on unrelated work. Quantify its
+`config/settings_data.json` currently holds a retired generation (`#EA6452`,
+`#151411`, `#F6EFD9`, …) — legacy values, not the current authority. That drift
+is known and deliberately deferred — report it if asked, but do not raise it as
+a finding on unrelated work. Quantify its
 cost when asked rather than guessing: as measured 2026-08-18 it holds two
 `az-img__caption` elements at 3.07:1 where the authority palette would give
 5.00:1.
