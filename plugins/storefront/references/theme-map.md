@@ -18,7 +18,7 @@
 > atelier-zero-storefront/main` commits. Treat edits in either tree as deployable.
 
 - Horizon 4.1.1 repo: `main` = live for that theme. `dev` = experimental (kept fast-forwarded to main by `sync-dev.yml`).
-- **No Shopify CLI. No theme dev server.** Ever. Only local repo ↔ GitHub. `theme check` is permitted — it is local static analysis.
+- **Shopify CLI theme commands are authorized** — `dev`, `serve`, `check`, `push`, `publish`, `pull` and `share` (Vincent's rulings 2026-08-17 and 2026-08-18). `main` is the live theme, so a CLI push writes straight to the storefront with no commit and no GitHub record; prefer local repo ↔ GitHub when the change should stay reviewable, and always say which theme you pushed to. `theme delete` still needs an explicit ask.
 
 ## Horizon 4.1.1 — what changed
 - Color schemes are gone. There is ONE **Color Palette**: reference `settings.color_palette.background` and `settings.color_palette.foreground` (seen throughout `product.hair-systems.json`). Do not reintroduce scheme settings.

@@ -15,7 +15,7 @@ Use the adapter matching the input. Every adapter must produce one standalone `.
 - Inspect Liquid, section schemas, product objects, dynamic sources, metafields, localization, and app blocks only to understand the intended visible states.
 - Recreate those states as safe static or simulated HTML using representative source content. Label simulated cart, variant, account, personalization, or checkout behavior.
 - Do not output Liquid or edit the live theme as part of this skill.
-- Do not use Shopify CLI, a theme dev server, preview-theme surfaces, or publication actions.
+- Do not use publication actions or preview-theme surfaces as part of this skill. (`shopify theme dev` and `theme check` are permitted in the storefront repo generally — Vincent's ruling, 2026-08-17 — they are just not part of this conversion workflow, which outputs static HTML.)
 - Preserve the composition and commerce hierarchy without claiming the HTML preview is production-connected.
 
 ## Email and HubSpot inputs

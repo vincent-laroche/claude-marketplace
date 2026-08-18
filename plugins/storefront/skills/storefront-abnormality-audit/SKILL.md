@@ -20,7 +20,7 @@ Work from evidence, not impression:
 3. If live inspection is possible, capture at least desktop and mobile evidence.
 4. Use the storefront's current `DESIGN.md`, current brand token source, and live rendered behavior over stale memory or older skill files.
 
-For Hair Solutions Co., do not use Shopify CLI theme-dev or local preview unless Vincent explicitly overrides the project rule in the current conversation.
+For Hair Solutions Co., `shopify theme dev` and local preview are permitted and are a good source of rendered evidence (Vincent's ruling, 2026-08-17). `theme push` and `publish` are also permitted (2026-08-18) — but `atelier-zero-storefront/main` is the live theme, so a CLI push goes straight to hairsolutions.co with no GitHub record. `theme delete` remains gated.
 
 ## Audit Workflow
 
