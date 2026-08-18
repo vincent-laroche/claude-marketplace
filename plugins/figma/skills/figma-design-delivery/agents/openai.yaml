@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Design Delivery"
+  short_description: "Deliver accessible designs and handoffs"
+  default_prompt: "Use $figma-design-delivery to review, build, or hand off this design."

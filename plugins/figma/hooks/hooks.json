@@ -1,0 +1,32 @@
+{
+  "description": "Figma plugin safety hooks. They add bounded context, block prohibited Shopify CLI/theme-server commands, and require confirmation before dangerous Figma or Shopify MCP mutations.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/session_preflight.py\"", "timeout": 5 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/pre_command_guard.py\"", "timeout": 5 }
+        ]
+      },
+      {
+        "matcher": "mcp__codex_apps__shopify_admin_*",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/shopify_admin_guard.py\"", "timeout": 5 }
+        ]
+      },
+      {
+        "matcher": "mcp__codex_apps__figma_use_figma",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/figma_mutation_guard.py\"", "timeout": 5 }
+        ]
+      }
+    ]
+  }
+}

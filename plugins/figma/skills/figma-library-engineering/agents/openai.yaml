@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Library Engineering"
+  short_description: "Build tokenized Figma libraries cleanly"
+  default_prompt: "Use $figma-library-engineering to build or repair this Figma system."

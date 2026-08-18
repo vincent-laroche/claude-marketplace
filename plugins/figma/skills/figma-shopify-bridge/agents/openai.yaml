@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Shopify Bridge"
+  short_description: "Translate Figma intent to native Shopify"
+  default_prompt: "Use $figma-shopify-bridge to turn this Figma design into a Shopify-ready plan."

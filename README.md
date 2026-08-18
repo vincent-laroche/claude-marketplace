@@ -40,7 +40,7 @@ turns on the packs that project actually needs.
 | `media` | 44 | — |
 | `design-review` | 8 | — |
 | `integrations` | 7 | — |
-| `figma` | 5 | — |
+| `figma` | 11 | 1 agent, command, hooks |
 | `agent-ops` | 11 | — |
 
 ## Provenance

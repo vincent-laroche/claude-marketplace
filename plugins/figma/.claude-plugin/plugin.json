@@ -1,7 +1,7 @@
 {
   "name": "figma",
-  "version": "1.0.0",
-  "description": "Figma developer tooling \u2014 API selection, Plugin API, plugin development, REST integration, and bounded web-capture import.",
+  "version": "1.1.0",
+  "description": "Figma operations and developer tooling — safe file work, design libraries, delivery, Shopify translation, integrations, API selection, plugins, REST, web capture, and motion. Ships an agent, command, capability contract, and safety hooks.",
   "author": {
     "name": "Hair Solutions Co."
   },

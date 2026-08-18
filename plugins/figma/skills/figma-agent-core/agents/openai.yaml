@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Agent Core"
+  short_description: "Route safe Figma file work precisely"
+  default_prompt: "Use $figma-agent-core to inspect and safely execute this Figma task."

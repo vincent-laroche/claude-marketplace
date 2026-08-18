@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Research and Motion"
+  short_description: "Map references, flows, and Figma motion"
+  default_prompt: "Use $figma-research-motion to map this visual reference, recording, or motion."

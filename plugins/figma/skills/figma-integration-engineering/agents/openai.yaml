@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Integration Engineering"
+  short_description: "Build safe Figma API integrations"
+  default_prompt: "Use $figma-integration-engineering to design or debug this Figma integration."
