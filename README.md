@@ -33,6 +33,7 @@ turns on the packs that project actually needs.
 | `storefront` | 13 | 3 agents, hook |
 | `brand` | 4 | 1 agents |
 | `marketing` | 11 | — |
+| `email-marketing` | 13 | 8 paired agents, MailerLite MCP, hooks |
 | `crm` | 5 | — |
 | `hs-sales` | 9 | — |
 | `hs-operations` | 5 | — |
