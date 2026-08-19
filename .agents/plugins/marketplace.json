@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Vincent Laroche's working toolkit — Hair Solutions Co. business skills, storefront and brand systems, agent operations, and media production.",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "renames": {
     "brand": null
@@ -63,6 +63,26 @@
         "email",
         "campaigns",
         "automations"
+      ],
+      "defaultEnabled": false
+    },
+    {
+      "name": "shopify-marketing",
+      "source": "./plugins/shopify-marketing",
+      "description": "Hair Solutions Co. Shopify-native marketing on the 2026 Shopify Messaging platform — email, SMS and WhatsApp campaigns, custom Liquid templates, sender authentication, deliverability and consent, segmentation, lifecycle automations across Shopify Messaging and Shopify Flow, Shopify Forms, Growth analytics and Campaign Autopilot, and Shopify Inbox as a conversion surface. Ships 3 skills covering the Shopify Email-to-Messaging transition.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Hair Solutions Co."
+      },
+      "displayName": "Shopify Marketing",
+      "category": "marketing",
+      "tags": [
+        "shopify",
+        "shopify-messaging",
+        "lifecycle",
+        "automations",
+        "email",
+        "sms"
       ],
       "defaultEnabled": false
     },

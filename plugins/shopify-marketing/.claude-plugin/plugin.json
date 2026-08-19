@@ -1,0 +1,27 @@
+{
+  "name": "shopify-marketing",
+  "version": "1.0.0",
+  "description": "Hair Solutions Co. Shopify-native marketing operations for the 2026 Shopify Messaging platform: email, SMS, and WhatsApp campaigns, custom Liquid templates, sender authentication and deliverability, subscriber consent and segmentation, lifecycle automations across Shopify Messaging and Shopify Flow, Shopify Forms, Growth analytics and Campaign Autopilot, and Shopify Inbox as a conversion and support surface. Ships 3 skills covering the Shopify Email-to-Messaging transition.",
+  "author": {
+    "name": "Hair Solutions Co."
+  },
+  "homepage": "https://hairsolutions.co",
+  "repository": "https://github.com/vincent-laroche/claude-marketplace/tree/main/plugins/shopify-marketing",
+  "license": "UNLICENSED",
+  "keywords": [
+    "shopify",
+    "shopify-messaging",
+    "shopify-email",
+    "shopify-flow",
+    "lifecycle",
+    "automations",
+    "email-marketing",
+    "sms",
+    "whatsapp",
+    "deliverability",
+    "shopify-inbox",
+    "hairsolutions"
+  ],
+  "displayName": "Shopify Marketing",
+  "defaultEnabled": false
+}
