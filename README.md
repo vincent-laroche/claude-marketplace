@@ -106,6 +106,53 @@ the `mcp__plugin_figma_figma__*` prefix. Their skills do not overlap (ours is en
 REST, Plugin API, Shopify bridge, delivery; theirs is design authoring — `figma-use`,
 `figma-design-to-code`), but running both enabled registers the same server twice. Pick one.
 
+## Connector stack — the other half of "MCP tools"
+
+The three servers in the table above are the only ones **this marketplace** ships. Most of
+Vincent's actual tool stack — Notion, Shopify, Cloudflare, HubSpot, Google Workspace, GitHub,
+Stripe, Canva, Cloudinary, ElevenLabs, Magnific, HeyGen, Context7 — is **not** marketplace
+config at all. It is `claude.ai` OAuth connectors, registered once in the Claude Code account
+(not per-project, not per-marketplace) and available in every session regardless of which
+plugins are enabled. A future agent that goes looking for "the Shopify MCP config" in this repo
+will not find it, correctly — there isn't one to find.
+
+Audit command: `claude mcp list`. Read it as three tiers:
+
+| Tier | Example | Where it's configured |
+| --- | --- | --- |
+| `claude.ai` connector | Notion, Shopify, Cloudflare, HubSpot, Google Drive/Calendar/Gmail | Account-level OAuth, not a file in any repo. Re-auth via `/mcp` in the CLI. |
+| Plugin-local `.mcp.json` | this repo's `mailerlite`, `figma`, `chrome-devtools`, `desktop-commander` | `plugins/<plugin>/.mcp.json`, only live while that plugin is enabled |
+| Global `~/.claude.json` `mcpServers` | `memory-central` | Not tied to any plugin; always live |
+
+**Status as of 2026-08-18** (see `claude mcp list` for current truth — this table rots):
+
+- Needs a browser click via `/mcp`: `claude.ai HubSpot`, `claude.ai Stripe`, `claude.ai Canva`,
+  `claude.ai HyperFrames by HeyGen`. These are OAuth connectors — no tool call can finish them
+  from inside a session; `authenticate` just returns "ask the user to run `/mcp`."
+- `plugin:figma:figma` (this repo's `figma` plugin) also needed auth — distinct from the
+  already-connected `claude.ai Figma` connector, and from `figma@claude-plugins-official`,
+  which shares its server name (`mcp__plugin_figma_figma__*`) per the collision note above.
+  Three separate Figma surfaces; check which one actually failed before assuming they all did.
+- `github@claude-plugins-official` fails outright (`Authorization header is badly formatted`) —
+  its `.mcp.json` reads `${GITHUB_PERSONAL_ACCESS_TOKEN}`, which is unset in `~/.env`. Not
+  urgent: `plugin:everything-claude-code:github` already connects and covers the same surface.
+  Fix by adding the token to `~/.env`, or drop the redundant plugin.
+- `memory-central` (global, not this repo) pointed at a deleted path
+  (`~/03_agents/central-memory-system`) — the project moved to
+  `~/02_dev/agent-central-memory-system` without the `~/.claude.json` registration following.
+  Patched 2026-08-18; `~/.claude.json` is rewritten by the running process, so a live session
+  won't pick this up until restart — re-run `claude mcp list` after restarting to confirm.
+- A stale duplicate `claude.ai Notion` entry (`https://mcp.notion.com`, no `/mcp` suffix) 404s.
+  The real one, `claude.ai Notion (2)` (`.../mcp`), connects fine — the first is dead
+  registration weight, not a working integration that broke.
+
+**What this means for "fully authorized, never wonder how to connect":** the plugin-local and
+global tiers are fixable from a repo (config, paths, tokens). The connector tier is not — it is
+gated on Vincent clicking through OAuth in his own terminal, by design (an agent silently
+acquiring broader account scopes on his behalf is the failure mode, not the fix). An agent
+hitting a `Needs authentication` connector should say so and name the exact server, not treat it
+as a bug to route around.
+
 ## Provenance
 
 `hs-*` plugins hold skills produced by merging Anthropic base skills with Hair Solutions Co.
